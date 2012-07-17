@@ -7,3 +7,6 @@ C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\E
 C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ManagerApplication\obj\Debug\ExpenseSample.UI.Win.Approver.csproj.GenerateResource.Cache
 C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ManagerApplication\obj\Debug\ApproverApplication.exe
 C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ManagerApplication\obj\Debug\ApproverApplication.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\bin\ApproverApplication.exe.config
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Presentation\ExpenseSample.UI.ManagerApplication\obj\Debug\ApproverApplication.exe
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Presentation\ExpenseSample.UI.ManagerApplication\obj\Debug\ApproverApplication.pdb

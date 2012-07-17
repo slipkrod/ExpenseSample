@@ -21,3 +21,26 @@ C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Models\Expense
 C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.Services.Contracts.pdb
 C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.Services.pdb
 C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Models\ExpenseSample.Models\obj\Debug\ExpenseSample.Models.modelprojResolveAssemblyReference.cache
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ApproverApplication.exe
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseApplication.exe
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.Business.Components.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.Business.Entities.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.Business.Workflows.Activities.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.Business.Workflows.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.Data.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.Services.Contracts.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.Services.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.UI.Process.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.UI.Web.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.Business.Components.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.Business.Entities.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.Business.Workflows.Activities.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.Business.Workflows.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.Data.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseApplication.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ApproverApplication.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.UI.Process.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.UI.Web.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.Services.Contracts.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\bin\Debug\ExpenseSample.Services.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Models\ExpenseSample.Models\obj\Debug\ExpenseSample.Models.modelprojResolveAssemblyReference.cache

@@ -7,3 +7,12 @@ C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Hosts\ExpenseS
 C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Hosts\ExpenseSample.Hosts.WindowsServiceHost\obj\Debug\ExpenseSample.Hosts.WindowsServiceHost.csproj.GenerateResource.Cache
 C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Hosts\ExpenseSample.Hosts.WindowsServiceHost\obj\Debug\ExpenseSample.Hosts.WindowsServiceHost.exe
 C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Hosts\ExpenseSample.Hosts.WindowsServiceHost\obj\Debug\ExpenseSample.Hosts.WindowsServiceHost.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\bin\ExpenseSample.Hosts.WindowsServiceHost.exe.config
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\bin\ExpenseSample.Hosts.WindowsServiceHost.exe
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\bin\ExpenseSample.Hosts.WindowsServiceHost.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Hosts\ExpenseSample.Hosts.WindowsServiceHost\obj\Debug\ExpenseSample.Hosts.WindowsServiceHost.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Hosts\ExpenseSample.Hosts.WindowsServiceHost\obj\Debug\ExpenseSample.Hosts.WindowsServiceHost.ProjectInstaller.resources
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Hosts\ExpenseSample.Hosts.WindowsServiceHost\obj\Debug\ExpenseSample.Hosts.WindowsServiceHost.WindowsServiceHost.resources
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Hosts\ExpenseSample.Hosts.WindowsServiceHost\obj\Debug\ExpenseSample.Hosts.WindowsServiceHost.csproj.GenerateResource.Cache
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Hosts\ExpenseSample.Hosts.WindowsServiceHost\obj\Debug\ExpenseSample.Hosts.WindowsServiceHost.exe
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Hosts\ExpenseSample.Hosts.WindowsServiceHost\obj\Debug\ExpenseSample.Hosts.WindowsServiceHost.pdb

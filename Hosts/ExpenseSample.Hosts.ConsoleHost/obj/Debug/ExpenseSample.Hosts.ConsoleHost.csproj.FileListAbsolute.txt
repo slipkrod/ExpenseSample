@@ -4,3 +4,9 @@ C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\bin\ExpenseSam
 C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Hosts\ExpenseSample.Hosts.ConsoleHost\obj\Debug\ExpenseSample.Hosts.ConsoleHost.csprojResolveAssemblyReference.cache
 C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Hosts\ExpenseSample.Hosts.ConsoleHost\obj\Debug\ExpenseSample.Hosts.ConsoleHost.exe
 C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Hosts\ExpenseSample.Hosts.ConsoleHost\obj\Debug\ExpenseSample.Hosts.ConsoleHost.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\bin\ExpenseSample.Hosts.ConsoleHost.exe.config
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Hosts\ExpenseSample.Hosts.ConsoleHost\obj\Debug\ExpenseSample.Hosts.ConsoleHost.exe
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Hosts\ExpenseSample.Hosts.ConsoleHost\obj\Debug\ExpenseSample.Hosts.ConsoleHost.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\bin\ExpenseSample.Hosts.ConsoleHost.exe
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\bin\ExpenseSample.Hosts.ConsoleHost.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Hosts\ExpenseSample.Hosts.ConsoleHost\obj\Debug\ExpenseSample.Hosts.ConsoleHost.csprojResolveAssemblyReference.cache

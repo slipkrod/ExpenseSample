@@ -9,3 +9,6 @@ C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\E
 C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ExpenseApplication\obj\Debug\ExpenseSample.UI.Win.Expense.csproj.GenerateResource.Cache
 C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ExpenseApplication\obj\Debug\ExpenseApplication.exe
 C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ExpenseApplication\obj\Debug\ExpenseApplication.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\bin\ExpenseApplication.exe.config
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Presentation\ExpenseSample.UI.ExpenseApplication\obj\Debug\ExpenseApplication.exe
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\Repos\ExpenseSample\Presentation\ExpenseSample.UI.ExpenseApplication\obj\Debug\ExpenseApplication.pdb
