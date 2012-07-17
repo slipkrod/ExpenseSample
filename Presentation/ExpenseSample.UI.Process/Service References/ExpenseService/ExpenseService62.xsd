@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://serena-yeoh//LayerSample/Expense/2007/08" elementFormDefault="qualified" targetNamespace="http://serena-yeoh//LayerSample/Expense/2007/08" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8000/ExpenseService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ExpenseSample.Business.Entities" />
+  <xs:element name="Purge">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PurgeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListActiveExpenses">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListActiveExpensesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ExpenseSample.Business.Entities" minOccurs="0" name="ListActiveExpensesResult" nillable="true" type="q1:ArrayOfExpense" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListExpensesForEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="employeeID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListExpensesForEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ExpenseSample.Business.Entities" minOccurs="0" name="ListExpensesForEmployeeResult" nillable="true" type="q2:ArrayOfExpense" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListExpensesForApproval">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reviewerID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListExpensesForApprovalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ExpenseSample.Business.Entities" minOccurs="0" name="ListExpensesForApprovalResult" nillable="true" type="q3:ArrayOfExpense" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListExpenseReviews">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="expenseID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListExpenseReviewsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ExpenseSample.Business.Entities" minOccurs="0" name="ListExpenseReviewsResult" nillable="true" type="q4:ArrayOfExpenseReview" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListExpenseLogs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="expenseID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListExpenseLogsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ExpenseSample.Business.Entities" minOccurs="0" name="ListExpenseLogsResult" nillable="true" type="q5:ArrayOfExpenseLog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

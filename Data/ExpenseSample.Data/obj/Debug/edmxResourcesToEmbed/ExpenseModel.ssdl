@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExpenseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ExpenseModelStoreContainer">
+    <EntitySet Name="ExpenseLogs" EntityType="ExpenseModel.Store.ExpenseLogs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExpenseReviews" EntityType="ExpenseModel.Store.ExpenseReviews" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Expenses" EntityType="ExpenseModel.Store.Expenses" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ExpenseLogs_Expenses1" Association="ExpenseModel.Store.FK_ExpenseLogs_Expenses1">
+      <End Role="Expenses" EntitySet="Expenses" />
+      <End Role="ExpenseLogs" EntitySet="ExpenseLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExpenseReviews_Expenses1" Association="ExpenseModel.Store.FK_ExpenseReviews_Expenses1">
+      <End Role="Expenses" EntitySet="Expenses" />
+      <End Role="ExpenseReviews" EntitySet="ExpenseReviews" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ExpenseLogs">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ExpenseID" Type="bigint" />
+    <Property Name="StatusID" Type="tinyint" />
+    <Property Name="DateCreated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ExpenseReviews">
+    <Key>
+      <PropertyRef Name="ReviewID" />
+    </Key>
+    <Property Name="ReviewID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ExpenseID" Type="bigint" />
+    <Property Name="Reviewer" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+    <Property Name="IsApproved" Type="bit" />
+    <Property Name="DateApproved" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Expenses">
+    <Key>
+      <PropertyRef Name="ExpenseID" />
+    </Key>
+    <Property Name="ExpenseID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="WorkflowID" Type="uniqueidentifier" />
+    <Property Name="Employee" Type="varchar" MaxLength="50" />
+    <Property Name="ExpenseDate" Type="datetime" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="CategoryID" Type="tinyint" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="StatusID" Type="tinyint" />
+    <Property Name="AssignedTo" Type="varchar" MaxLength="50" />
+    <Property Name="IsCompleted" Type="bit" />
+    <Property Name="DateSubmitted" Type="datetime" />
+    <Property Name="DateModified" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_ExpenseLogs_Expenses1">
+    <End Role="Expenses" Type="ExpenseModel.Store.Expenses" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ExpenseLogs" Type="ExpenseModel.Store.ExpenseLogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Expenses">
+        <PropertyRef Name="ExpenseID" />
+      </Principal>
+      <Dependent Role="ExpenseLogs">
+        <PropertyRef Name="ExpenseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExpenseReviews_Expenses1">
+    <End Role="Expenses" Type="ExpenseModel.Store.Expenses" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ExpenseReviews" Type="ExpenseModel.Store.ExpenseReviews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Expenses">
+        <PropertyRef Name="ExpenseID" />
+      </Principal>
+      <Dependent Role="ExpenseReviews">
+        <PropertyRef Name="ExpenseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

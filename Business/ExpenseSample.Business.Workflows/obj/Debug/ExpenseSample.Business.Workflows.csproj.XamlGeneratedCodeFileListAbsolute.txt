@@ -1,0 +1,3 @@
+obj\Debug\_ExpenseSample.Business.Workflows.g.cs
+obj\Debug\ExpenseWorkflowService.g.cs
+obj\Debug\ExpenseFlowChart.g.cs

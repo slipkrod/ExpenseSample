@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ExpenseWorkflowService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="wsHttpExpenseWorkflowService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:ProtectionToken>
+              <wsp:Policy>
+                <sp:SecureConversationToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                  <wsp:Policy>
+                    <sp:RequireDerivedKeys />
+                    <sp:BootstrapPolicy>
+                      <wsp:Policy>
+                        <sp:SignedParts>
+                          <sp:Body />
+                          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+                          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+                        </sp:SignedParts>
+                        <sp:EncryptedParts>
+                          <sp:Body />
+                        </sp:EncryptedParts>
+                        <sp:SymmetricBinding>
+                          <wsp:Policy>
+                            <sp:ProtectionToken>
+                              <wsp:Policy>
+                                <sp:SpnegoContextToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                                  <wsp:Policy>
+                                    <sp:RequireDerivedKeys />
+                                  </wsp:Policy>
+                                </sp:SpnegoContextToken>
+                              </wsp:Policy>
+                            </sp:ProtectionToken>
+                            <sp:AlgorithmSuite>
+                              <wsp:Policy>
+                                <sp:Basic256 />
+                              </wsp:Policy>
+                            </sp:AlgorithmSuite>
+                            <sp:Layout>
+                              <wsp:Policy>
+                                <sp:Strict />
+                              </wsp:Policy>
+                            </sp:Layout>
+                            <sp:IncludeTimestamp />
+                            <sp:EncryptSignature />
+                            <sp:OnlySignEntireHeadersAndBody />
+                          </wsp:Policy>
+                        </sp:SymmetricBinding>
+                        <sp:Wss11>
+                          <wsp:Policy />
+                        </sp:Wss11>
+                        <sp:Trust10>
+                          <wsp:Policy>
+                            <sp:MustSupportIssuedTokens />
+                            <sp:RequireClientEntropy />
+                            <sp:RequireServerEntropy />
+                          </wsp:Policy>
+                        </sp:Trust10>
+                      </wsp:Policy>
+                    </sp:BootstrapPolicy>
+                  </wsp:Policy>
+                </sp:SecureConversationToken>
+              </wsp:Policy>
+            </sp:ProtectionToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp />
+            <sp:EncryptSignature />
+            <sp:OnlySignEntireHeadersAndBody />
+          </wsp:Policy>
+        </sp:SymmetricBinding>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy />
+        </sp:Wss11>
+        <sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportIssuedTokens />
+            <sp:RequireClientEntropy />
+            <sp:RequireServerEntropy />
+          </wsp:Policy>
+        </sp:Trust10>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wsHttpExpenseWorkflowService_SubmitExpense_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wsHttpExpenseWorkflowService_SubmitExpense_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wsHttpExpenseWorkflowService_CancelExpense_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wsHttpExpenseWorkflowService_CancelExpense_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wsHttpExpenseWorkflowService_ReviewExpense_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wsHttpExpenseWorkflowService_ReviewExpense_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wsHttpExpenseWorkflowService_ApproveExpense_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wsHttpExpenseWorkflowService_ApproveExpense_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wsHttpExpenseWorkflowService_DisburseExpense_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wsHttpExpenseWorkflowService_DisburseExpense_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="CorrelationID" Namespace="http://tempuri.org/" />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="netTcpExpenseWorkflowService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8000/ExpenseWorkflowService?xsd=xsd3" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8000/ExpenseWorkflowService?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8000/ExpenseWorkflowService?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/ExpenseSample.Services.Contracts" />
+      <xsd:import schemaLocation="http://localhost:8000/ExpenseWorkflowService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ExpenseSample.Business.Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SubmitterRequestMessage">
+    <wsdl:part name="Expense" element="tns:Expense" />
+  </wsdl:message>
+  <wsdl:message name="SubmitterRequestMessage_Headers">
+    <wsdl:part name="CorrelationID" element="tns:CorrelationID" />
+  </wsdl:message>
+  <wsdl:message name="ApproverRequestMessage">
+    <wsdl:part name="Expense" element="tns:Expense" />
+    <wsdl:part name="Review" element="tns:Review" />
+  </wsdl:message>
+  <wsdl:message name="ApproverRequestMessage_Headers">
+    <wsdl:part name="CorrelationID" element="tns:CorrelationID" />
+  </wsdl:message>
+  <wsdl:portType name="IExpenseWorkflowService">
+    <wsdl:operation name="SubmitExpense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpenseWorkflowService/SubmitExpense" name="SubmitterRequestMessage" message="tns:SubmitterRequestMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpenseWorkflowService/SubmitExpenseResponse" name="SubmitterRequestMessage" message="tns:SubmitterRequestMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelExpense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpenseWorkflowService/CancelExpense" name="SubmitterRequestMessage" message="tns:SubmitterRequestMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpenseWorkflowService/CancelExpenseResponse" name="SubmitterRequestMessage" message="tns:SubmitterRequestMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReviewExpense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpenseWorkflowService/ReviewExpense" name="ApproverRequestMessage" message="tns:ApproverRequestMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpenseWorkflowService/ReviewExpenseResponse" name="ApproverRequestMessage" message="tns:ApproverRequestMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApproveExpense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpenseWorkflowService/ApproveExpense" name="ApproverRequestMessage" message="tns:ApproverRequestMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpenseWorkflowService/ApproveExpenseResponse" name="ApproverRequestMessage" message="tns:ApproverRequestMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisburseExpense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpenseWorkflowService/DisburseExpense" name="ApproverRequestMessage" message="tns:ApproverRequestMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpenseWorkflowService/DisburseExpenseResponse" name="ApproverRequestMessage" message="tns:ApproverRequestMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsHttpExpenseWorkflowService" type="tns:IExpenseWorkflowService">
+    <wsp:PolicyReference URI="#wsHttpExpenseWorkflowService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SubmitExpense">
+      <soap12:operation soapAction="http://tempuri.org/IExpenseWorkflowService/SubmitExpense" style="document" />
+      <wsdl:input name="SubmitterRequestMessage">
+        <wsp:PolicyReference URI="#wsHttpExpenseWorkflowService_SubmitExpense_Input_policy" />
+        <soap12:header message="tns:SubmitterRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SubmitterRequestMessage">
+        <wsp:PolicyReference URI="#wsHttpExpenseWorkflowService_SubmitExpense_output_policy" />
+        <soap12:header message="tns:SubmitterRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelExpense">
+      <soap12:operation soapAction="http://tempuri.org/IExpenseWorkflowService/CancelExpense" style="document" />
+      <wsdl:input name="SubmitterRequestMessage">
+        <wsp:PolicyReference URI="#wsHttpExpenseWorkflowService_CancelExpense_Input_policy" />
+        <soap12:header message="tns:SubmitterRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SubmitterRequestMessage">
+        <wsp:PolicyReference URI="#wsHttpExpenseWorkflowService_CancelExpense_output_policy" />
+        <soap12:header message="tns:SubmitterRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReviewExpense">
+      <soap12:operation soapAction="http://tempuri.org/IExpenseWorkflowService/ReviewExpense" style="document" />
+      <wsdl:input name="ApproverRequestMessage">
+        <wsp:PolicyReference URI="#wsHttpExpenseWorkflowService_ReviewExpense_Input_policy" />
+        <soap12:header message="tns:ApproverRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ApproverRequestMessage">
+        <wsp:PolicyReference URI="#wsHttpExpenseWorkflowService_ReviewExpense_output_policy" />
+        <soap12:header message="tns:ApproverRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApproveExpense">
+      <soap12:operation soapAction="http://tempuri.org/IExpenseWorkflowService/ApproveExpense" style="document" />
+      <wsdl:input name="ApproverRequestMessage">
+        <wsp:PolicyReference URI="#wsHttpExpenseWorkflowService_ApproveExpense_Input_policy" />
+        <soap12:header message="tns:ApproverRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ApproverRequestMessage">
+        <wsp:PolicyReference URI="#wsHttpExpenseWorkflowService_ApproveExpense_output_policy" />
+        <soap12:header message="tns:ApproverRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisburseExpense">
+      <soap12:operation soapAction="http://tempuri.org/IExpenseWorkflowService/DisburseExpense" style="document" />
+      <wsdl:input name="ApproverRequestMessage">
+        <wsp:PolicyReference URI="#wsHttpExpenseWorkflowService_DisburseExpense_Input_policy" />
+        <soap12:header message="tns:ApproverRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ApproverRequestMessage">
+        <wsp:PolicyReference URI="#wsHttpExpenseWorkflowService_DisburseExpense_output_policy" />
+        <soap12:header message="tns:ApproverRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="netTcpExpenseWorkflowService" type="tns:IExpenseWorkflowService">
+    <wsp:PolicyReference URI="#netTcpExpenseWorkflowService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="SubmitExpense">
+      <soap12:operation soapAction="http://tempuri.org/IExpenseWorkflowService/SubmitExpense" style="document" />
+      <wsdl:input name="SubmitterRequestMessage">
+        <soap12:header message="tns:SubmitterRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SubmitterRequestMessage">
+        <soap12:header message="tns:SubmitterRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelExpense">
+      <soap12:operation soapAction="http://tempuri.org/IExpenseWorkflowService/CancelExpense" style="document" />
+      <wsdl:input name="SubmitterRequestMessage">
+        <soap12:header message="tns:SubmitterRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SubmitterRequestMessage">
+        <soap12:header message="tns:SubmitterRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReviewExpense">
+      <soap12:operation soapAction="http://tempuri.org/IExpenseWorkflowService/ReviewExpense" style="document" />
+      <wsdl:input name="ApproverRequestMessage">
+        <soap12:header message="tns:ApproverRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ApproverRequestMessage">
+        <soap12:header message="tns:ApproverRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApproveExpense">
+      <soap12:operation soapAction="http://tempuri.org/IExpenseWorkflowService/ApproveExpense" style="document" />
+      <wsdl:input name="ApproverRequestMessage">
+        <soap12:header message="tns:ApproverRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ApproverRequestMessage">
+        <soap12:header message="tns:ApproverRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisburseExpense">
+      <soap12:operation soapAction="http://tempuri.org/IExpenseWorkflowService/DisburseExpense" style="document" />
+      <wsdl:input name="ApproverRequestMessage">
+        <soap12:header message="tns:ApproverRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ApproverRequestMessage">
+        <soap12:header message="tns:ApproverRequestMessage_Headers" part="CorrelationID" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExpenseWorkflowService">
+    <wsdl:port name="wsHttpExpenseWorkflowService" binding="tns:wsHttpExpenseWorkflowService">
+      <soap12:address location="http://localhost:8000/ExpenseWorkflowService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:8000/ExpenseWorkflowService</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>MY-SERENAY-12\Serena Yeoh</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="netTcpExpenseWorkflowService" binding="tns:netTcpExpenseWorkflowService">
+      <soap12:address location="net.tcp://localhost:8001/ExpenseWorkflowService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:8001/ExpenseWorkflowService</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>MY-SERENAY-12\Serena Yeoh</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

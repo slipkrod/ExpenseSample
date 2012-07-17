@@ -1,0 +1,11 @@
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.Web\bin\ExpenseSample.UI.Web.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.Web\bin\ExpenseSample.UI.Web.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.Web\bin\ExpenseSample.Business.Entities.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.Web\bin\ExpenseSample.UI.Process.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.Web\bin\ExpenseSample.Services.Contracts.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.Web\bin\ExpenseSample.Business.Entities.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.Web\bin\ExpenseSample.UI.Process.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.Web\bin\ExpenseSample.Services.Contracts.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.Web\obj\Debug\ExpenseSample.UI.Web.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.Web\obj\Debug\ExpenseSample.UI.Web.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.Web\obj\Debug\ExpenseSample.UI.Web.pdb

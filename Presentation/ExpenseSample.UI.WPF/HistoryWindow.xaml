@@ -1,0 +1,38 @@
+﻿<Window x:Class="ExpenseSample.UI.WPF.HistoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Approval History" Height="300" Width="500"
+        Background="{DynamicResource mainBackgroundBrush}" 
+        Loaded="Window_Loaded" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Border x:Name="header"
+                Grid.Row="0"
+                Style="{DynamicResource headerBorder}">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Left" Text="Approval History" 
+                           Style="{DynamicResource headerTextBlock}" />
+                <Button DockPanel.Dock="Right" Click="Close_Click" 
+                        Content="Close" Name="Close" 
+                        Style="{DynamicResource headerButton}" />
+            </DockPanel>
+        </Border>
+
+        <Border Grid.Row="1">
+            <DataGrid Name="reviewsGrid" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Path=ReviewID}" Header="ReviewID" />
+                    <DataGridTextColumn Binding="{Binding Path=ExpenseID}" Header="ExpenseID" />
+                    <DataGridTextColumn Binding="{Binding Path=Reviewer}" Header="Reviewer" />
+                    <DataGridTextColumn Binding="{Binding Path=Remarks}" Header="Remarks" />
+                    <DataGridCheckBoxColumn Binding="{Binding Path=IsApproved}" Header="Is Approved" />
+                    <DataGridTextColumn Binding="{Binding Path=DateApproved}" Header="Date Approved" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+    </Grid>
+</Window>

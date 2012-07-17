@@ -1,0 +1,17 @@
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\bin\ExpenseSample.Business.Workflows.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\bin\ExpenseSample.Business.Workflows.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows\obj\Debug\ExpenseSample.Business.Workflows.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows\obj\Debug\ExpenseWorkflowService.g.xaml
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows\obj\Debug\ExpenseFlowChart.g.xaml
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows\obj\Debug\_ExpenseSample.Business.Workflows.g.cs
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows\obj\Debug\ExpenseWorkflowService.g.cs
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows\obj\Debug\ExpenseFlowChart.g.cs
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows\obj\Debug\ExpenseSample.Business.Workflows.csproj.XamlGeneratedCodeFileListAbsolute.txt
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows\obj\Debug\ExpenseSample.Business.Workflows.csproj.XamlGeneratedXamlFileListAbsolute.txt
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows\obj\Debug\InProcessTempFiles\ExpenseFlowChart.g.cs
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows\obj\Debug\InProcessTempFiles\ExpenseFlowChart.g.xaml
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows\obj\Debug\InProcessTempFiles\ExpenseWorkflowService.g.cs
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows\obj\Debug\InProcessTempFiles\ExpenseWorkflowService.g.xaml
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows\obj\Debug\InProcessTempFiles\_ExpenseSample.Business.Workflows.g.cs
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows\obj\Debug\ExpenseSample.Business.Workflows.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows\obj\Debug\ExpenseSample.Business.Workflows.pdb

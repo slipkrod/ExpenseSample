@@ -1,0 +1,136 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="glassButton"  TargetType="{x:Type Button}">
+        <Setter Property="Foreground" Value="{DynamicResource buttonTextBrush}" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="0,10,5,0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="fadeIn">
+                            <DoubleAnimation Duration="0:0:0.3"
+                                             Storyboard.TargetName="glow"
+                                             Storyboard.TargetProperty="(UIElement.Opacity)"
+                                             To="1" />
+                        </Storyboard>
+                        <Storyboard x:Key="fadeOut">
+                            <DoubleAnimation Duration="0:0:0.3"
+                                             Storyboard.TargetName="glow"
+                                             Storyboard.TargetProperty="(UIElement.Opacity)"
+                                             To="0" />
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+                    <Border BorderBrush="{DynamicResource buttonOuterBorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="4"
+                            Margin="{TemplateBinding Margin}">
+                        <Border x:Name="border"
+                                Background="{DynamicResource buttonBackgroundBrush}"
+                                BorderBrush="{DynamicResource buttonInnerBorderBrush}"
+                                BorderThickness="1"
+                                CornerRadius="3">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.5*" />
+                                    <RowDefinition Height="0.5*" />
+                                </Grid.RowDefinitions>
+                                <Border x:Name="glow" 
+                                        Background="{DynamicResource glowGradientBrush}"
+                                        CornerRadius="3"
+                                        Grid.RowSpan="2"
+                                        HorizontalAlignment="Stretch"
+                                        Opacity="0"
+                                        Width="Auto" />
+                                <ContentPresenter Grid.RowSpan="2"
+                                                  HorizontalAlignment="Center"
+                                                  RecognizesAccessKey="True"
+                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                  VerticalAlignment="Center"
+                                                  Width="Auto" />
+                                <Border x:Name="shine"
+                                        Background="{DynamicResource shineGradientBrush}"
+                                        CornerRadius="3,3,0,0"
+                                        HorizontalAlignment="Stretch"
+                                        Margin="0"
+                                        Width="Auto" />
+                            </Grid>
+                        </Border>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Opacity" 
+                                    TargetName="shine" 
+                                    Value="0.4" />
+                            <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="{DynamicResource shineBackgroundBrush}" />
+                            <Setter Property="Visibility"
+                                    TargetName="glow"
+                                    Value="Hidden" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource fadeIn}" />
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource fadeOut}" />
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Width" Value="80" />
+    </Style>
+
+    <Style x:Key="headerButton" 
+           BasedOn="{StaticResource glassButton}" 
+           TargetType="{x:Type Button}">
+        <Setter Property="Margin" Value="5,0,0,0" />
+        <Setter Property="HorizontalAlignment" Value="Right" />
+    </Style>
+
+    <Style TargetType="{x:Type Label}">
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="Foreground" Value="{DynamicResource labelForegroundBrush}" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+    </Style>
+
+    <Style x:Key="mainPaneBorder" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="{DynamicResource mainPaneBackgroundBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource borderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="10" />
+    </Style>
+
+    <Style x:Key="headerBorder" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="{DynamicResource headerBackgroundBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource borderBrush}" />
+        <Setter Property="BorderThickness" Value="1,1,1,0" />
+        <Setter Property="CornerRadius" Value="10,10,0,0" />
+        <Setter Property="Padding" Value="10" />
+    </Style>
+
+    <Style x:Key="headerTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{DynamicResource headerTextBlockForegroundBrush}" />
+    </Style>
+
+    <Style x:Key="controlPanelBorder" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="{DynamicResource controlContainerBackgroundBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource borderBrush}" />
+        <Setter Property="BorderThickness" Value="1,1,1,1" />
+        <Setter Property="CornerRadius" Value="0,0,10,10" />
+    </Style>
+
+    <Style x:Key="wideControlPanelBorder" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="{x:Null}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource borderBrush}" />
+        <Setter Property="BorderThickness" Value="0,1,0,0" />
+    </Style>
+
+</ResourceDictionary>

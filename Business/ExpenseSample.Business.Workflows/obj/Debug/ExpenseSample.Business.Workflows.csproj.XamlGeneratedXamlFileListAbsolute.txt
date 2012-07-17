@@ -1,0 +1,2 @@
+obj\Debug\ExpenseWorkflowService.g.xaml
+obj\Debug\ExpenseFlowChart.g.xaml

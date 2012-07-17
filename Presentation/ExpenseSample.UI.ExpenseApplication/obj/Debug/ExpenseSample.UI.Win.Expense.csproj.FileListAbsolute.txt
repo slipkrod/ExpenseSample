@@ -1,0 +1,11 @@
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\bin\ExpenseApplication.exe.config
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\bin\ExpenseApplication.exe
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\bin\ExpenseApplication.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ExpenseApplication\obj\Debug\ExpenseSample.UI.Win.Expense.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ExpenseApplication\obj\Debug\ExpenseSample.UI.ApprovalHistoryForm.resources
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ExpenseApplication\obj\Debug\ExpenseSample.UI.Win.SubmissionForm.resources
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ExpenseApplication\obj\Debug\ExpenseSample.UI.Win.Properties.Resources.resources
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ExpenseApplication\obj\Debug\ExpenseSample.UI.TransitionLogForm.resources
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ExpenseApplication\obj\Debug\ExpenseSample.UI.Win.Expense.csproj.GenerateResource.Cache
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ExpenseApplication\obj\Debug\ExpenseApplication.exe
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ExpenseApplication\obj\Debug\ExpenseApplication.pdb

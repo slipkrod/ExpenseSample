@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="b6af0c7b-2c48-48e8-864b-5a20c4c0dafe" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <comments>
+    <comment Id="6d3c3858-e077-4b10-ae57-bc5fe18901be" name="Comment1">
+      <body>Host projects are not included in this diagram because they are physical components for hosting.</body>
+    </comment>
+  </comments>
+  <layers>
+    <layer Id="913fa439-a5d3-41df-b85d-5eda11712b0e" name="Data Layer">
+      <childLayers>
+        <layer Id="57b7e9a6-44e1-43cd-b989-8bc8ac97158b" name="ExpenseSample.Data">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="0564caaa-059f-49c9-a6c8-e9b7105c631a" direction="Forward">
+              <layerMoniker Id="596c0196-8735-4218-90e4-2c4dd426584d" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="61ded828-229b-45a7-a807-e859741efde3" name="ExpenseSample.Data.dll">
+              <ArtifactNode Label="ExpenseSample.Data.dll" Category="FileSystem.Category.FileOfType.dll" Id="(Assembly=ExpenseSample.Data)" />
+              <ExpandedNode Id="(Assembly=ExpenseSample.Data)" Label="ExpenseSample.Data.dll" Category="FileSystem.Category.FileOfType.dll">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="2767cc8e-221e-453e-bb45-5dc728950491" name="Business Layer">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="909020b4-b21c-40c5-b026-176f889d0ed2" direction="Forward">
+          <layerMoniker Id="913fa439-a5d3-41df-b85d-5eda11712b0e" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="2fae4689-de56-4996-963b-1d83d7ce1194" name="ExpenseSample.Business.Components">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="cd65b1eb-8d76-4b51-bb64-19c08f26e9d7" direction="Forward">
+              <layerMoniker Id="596c0196-8735-4218-90e4-2c4dd426584d" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="ba19e2e7-2a5d-43a6-8ef1-b6b503ca2148" direction="Forward">
+              <layerMoniker Id="57b7e9a6-44e1-43cd-b989-8bc8ac97158b" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="8ca10ea5-aca4-43ac-b0c8-78701780249f" name="ExpenseSample.Business.Components">
+              <ArtifactNode Label="ExpenseSample.Business.Components" Category="CodeSchema_Project" Id="(Assembly=../../Business/ExpenseSample.Business.Components/ExpenseSample.Business.Components.csproj)">
+                <Category Ref="CodeSchema_SourceFile" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=ExpenseSample.Business.Components)" Label="ExpenseSample.Business.Components.dll" Category="FileSystem.Category.FileOfType.dll">
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="ec17ff4c-9baa-4f1d-851d-4fd2d1b96e0d" name="ExpenseSample.Business.Workflows">
+          <references>
+            <reference Id="75ce59eb-a87c-4e96-8ca4-1becb412d428" name="ExpenseSample.Business.Workflows.dll">
+              <ArtifactNode Label="ExpenseSample.Business.Workflows.dll" Category="FileSystem.Category.FileOfType.dll" Id="(Assembly=ExpenseSample.Business.Workflows)" />
+              <ExpandedNode Id="(Assembly=ExpenseSample.Business.Workflows)" Label="ExpenseSample.Business.Workflows.dll" Category="FileSystem.Category.FileOfType.dll">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="94737b48-deb8-422a-a6f5-80317f42250b" name="ExpenseSample.Business.Workflows.Activities">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="20754d9f-13fa-4109-9393-9085c80fb225" direction="Forward">
+              <layerMoniker Id="2fae4689-de56-4996-963b-1d83d7ce1194" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="caa71aed-76ec-4bd6-aabb-a95f9dc33557" direction="Forward">
+              <layerMoniker Id="596c0196-8735-4218-90e4-2c4dd426584d" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="3acfdd22-32ba-4950-b1ee-46c27ff29af5" name="ExpenseSample.Business.Workflows.Activities.dll">
+              <ArtifactNode Label="ExpenseSample.Business.Workflows.Activities.dll" Category="FileSystem.Category.FileOfType.dll" Id="(Assembly=ExpenseSample.Business.Workflows.Activities)" />
+              <ExpandedNode Id="(Assembly=ExpenseSample.Business.Workflows.Activities)" Label="ExpenseSample.Business.Workflows.Activities.dll" Category="FileSystem.Category.FileOfType.dll">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="6f5ceccd-342c-4e34-9dd9-2b014f94a378" name="Presentation Layer">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="399c8bbf-86dd-42e1-9046-6a2b1bc4a216" direction="Forward">
+          <layerMoniker Id="ab1630aa-07d1-4768-ad59-5f7a8fddac6e" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="c3af7c16-0288-43fb-9477-76c4287487cf" name="ExpenseSample.UI.Process">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="28f09166-9bb7-4e87-a359-7b4514daffcb" direction="Forward">
+              <layerMoniker Id="596c0196-8735-4218-90e4-2c4dd426584d" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="fe3617b6-dc68-4b61-958c-b547ef933fcc" direction="Forward">
+              <layerMoniker Id="6549fd54-4e24-4820-996e-63fd2f20bb03" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="68158da3-3643-4c77-b37c-50bdde313c9e" name="ExpenseSample.UI.Process.dll">
+              <ArtifactNode Label="ExpenseSample.UI.Process.dll" Category="FileSystem.Category.FileOfType.dll" Id="(Assembly=ExpenseSample.UI.Process)" />
+              <ExpandedNode Id="(Assembly=ExpenseSample.UI.Process)" Label="ExpenseSample.UI.Process.dll" Category="FileSystem.Category.FileOfType.dll">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="555b478f-87c5-4ea7-8780-47b77f83ee27" name="Expense Application">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="e92bd292-d767-47a9-ab15-0d2d76be5856" direction="Forward">
+              <layerMoniker Id="c3af7c16-0288-43fb-9477-76c4287487cf" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="3332747c-81ab-4b24-aa2e-423a206d24a6" direction="Forward">
+              <layerMoniker Id="596c0196-8735-4218-90e4-2c4dd426584d" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="1b0d3f5b-8bc4-4184-9dc2-717bfd23e07a" name="ExpenseApplication.exe">
+              <ArtifactNode Label="ExpenseApplication.exe" Category="FileSystem.Category.FileOfType.exe" Id="(Assembly=ExpenseApplication)" />
+              <ExpandedNode Id="(Assembly=ExpenseApplication)" Label="ExpenseApplication.exe" Category="FileSystem.Category.FileOfType.exe">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="b2bd4ee6-f96d-4cb7-8933-cd37abffa32e" name="Approver Application">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="74457432-27d9-4018-b8f9-3484a8052975" direction="Forward">
+              <layerMoniker Id="c3af7c16-0288-43fb-9477-76c4287487cf" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="71a0dc23-38a5-4d16-a956-2dd448684685" direction="Forward">
+              <layerMoniker Id="596c0196-8735-4218-90e4-2c4dd426584d" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="0cc7e309-5c9d-46ed-af4c-cd70d6c960ef" name="ApproverApplication.exe">
+              <ArtifactNode Label="ApproverApplication.exe" Category="FileSystem.Category.FileOfType.exe" Id="(Assembly=ApproverApplication)" />
+              <ExpandedNode Id="(Assembly=ApproverApplication)" Label="ApproverApplication.exe" Category="FileSystem.Category.FileOfType.exe">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="4983a230-5c0c-4c4c-b7b5-a890a1f5176d" name="ExpenseSample.UI.Web">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="dc078cd9-0c0f-4e7f-9452-9f58dd87d759" direction="Forward">
+              <layerMoniker Id="c3af7c16-0288-43fb-9477-76c4287487cf" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="982a167a-845b-4a73-a56f-e85fb2116380" direction="Forward">
+              <layerMoniker Id="596c0196-8735-4218-90e4-2c4dd426584d" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="5b4235e0-84c4-4aba-8da6-081700245c6f" name="ExpenseSample.UI.Web.dll">
+              <ArtifactNode Label="ExpenseSample.UI.Web.dll" Category="FileSystem.Category.FileOfType.dll" Id="(Assembly=ExpenseSample.UI.Web)" />
+              <ExpandedNode Id="(Assembly=ExpenseSample.UI.Web)" Label="ExpenseSample.UI.Web.dll" Category="FileSystem.Category.FileOfType.dll">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="ab1630aa-07d1-4768-ad59-5f7a8fddac6e" name="Services Layer">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="5c5dccaa-7ed3-4ac0-8c4b-507a705162f7" direction="Forward">
+          <layerMoniker Id="2767cc8e-221e-453e-bb45-5dc728950491" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="6549fd54-4e24-4820-996e-63fd2f20bb03" name="ExpenseSample.Services.Contracts">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="59a853a3-1f0b-4e19-92a7-f5dd41ad14cd" direction="Forward">
+              <layerMoniker Id="596c0196-8735-4218-90e4-2c4dd426584d" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="97666785-cba4-44b8-95ea-f30dd9d7c19b" name="ExpenseSample.Services.Contracts.dll">
+              <ArtifactNode Label="ExpenseSample.Services.Contracts.dll" Category="FileSystem.Category.FileOfType.dll" Id="(Assembly=ExpenseSample.Services.Contracts)" />
+              <ExpandedNode Id="(Assembly=ExpenseSample.Services.Contracts)" Label="ExpenseSample.Services.Contracts.dll" Category="FileSystem.Category.FileOfType.dll">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="b02ed93d-c560-4f26-b8f3-a2e83052b5b6" name="ExpenseSample.Services">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="64debaab-e121-4f74-b4e7-fa8499b9e8ad" direction="Forward">
+              <layerMoniker Id="2fae4689-de56-4996-963b-1d83d7ce1194" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="99c7123b-2144-4b6d-a80d-0f3612ed9117" direction="Forward">
+              <layerMoniker Id="596c0196-8735-4218-90e4-2c4dd426584d" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="779f1b11-e5d6-44e9-b3fd-3687402f2d29" direction="Forward">
+              <layerMoniker Id="6549fd54-4e24-4820-996e-63fd2f20bb03" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="c9aeb020-2d5f-4cf4-bdc5-33f3d4d990da" name="ExpenseSample.Services.dll">
+              <ArtifactNode Label="ExpenseSample.Services.dll" Category="FileSystem.Category.FileOfType.dll" Id="(Assembly=ExpenseSample.Services)" />
+              <ExpandedNode Id="(Assembly=ExpenseSample.Services)" Label="ExpenseSample.Services.dll" Category="FileSystem.Category.FileOfType.dll">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="596c0196-8735-4218-90e4-2c4dd426584d" name="ExpenseSample.Business.Entities (Shared)">
+      <description>Shared Data Transfer</description>
+      <comments>
+        <comment Id="a3f7acae-1739-4ccb-a5dd-3028947112b3" name="Comment1">
+          <body>Business Entities are shared across all layers eventhough they reside in the Business Layer namespace.
+
+There are no business logic in the Business Entitites.</body>
+        </comment>
+      </comments>
+      <references>
+        <reference Id="3dcdca50-6dfa-4895-92c7-51b09510f2b7" name="ExpenseSample.Business.Entities.dll">
+          <ArtifactNode Label="ExpenseSample.Business.Entities.dll" Category="FileSystem.Category.FileOfType.dll" Id="(Assembly=ExpenseSample.Business.Entities)" />
+          <ExpandedNode Id="(Assembly=ExpenseSample.Business.Entities)" Label="ExpenseSample.Business.Entities.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

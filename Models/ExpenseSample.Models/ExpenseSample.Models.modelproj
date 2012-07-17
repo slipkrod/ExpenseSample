@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{25edb24f-499d-48a0-8be5-d012a2eb33e4}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>ExpenseSample.Models</Name>
+    <RootNamespace>ExpenseSample.Models</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="false" />
+  <ItemGroup>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\ExpenseSample.Models.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="ExpenseSample.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="ExpenseSample.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ExpenseSample.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="ExpenseSample.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>ExpenseSample.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Business\ExpenseSample.Business.Components\ExpenseSample.Business.Components.csproj">
+      <Name>ExpenseSample.Business.Components</Name>
+      <Project>{3b6364a2-ee26-479a-9a64-9f379bccbe36}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business\ExpenseSample.Business.Entities\ExpenseSample.Business.Entities.csproj">
+      <Name>ExpenseSample.Business.Entities</Name>
+      <Project>{5debe560-4078-4533-a91b-60f2e4ed3751}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business\ExpenseSample.Business.Workflows.Activities\ExpenseSample.Business.Workflows.Activities.csproj">
+      <Name>ExpenseSample.Business.Workflows.Activities</Name>
+      <Project>{3e4c6bcb-b97d-4d3c-825e-a01aaabaf9bf}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business\ExpenseSample.Business.Workflows\ExpenseSample.Business.Workflows.csproj">
+      <Name>ExpenseSample.Business.Workflows</Name>
+      <Project>{9a67fecc-6f60-483d-8a39-d8710ac31acd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\ExpenseSample.Data\ExpenseSample.Data.csproj">
+      <Name>ExpenseSample.Data</Name>
+      <Project>{ee5622da-2109-4431-9d61-455bc6ed46bf}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Presentation\ExpenseSample.UI.ExpenseApplication\ExpenseSample.UI.Win.Expense.csproj">
+      <Name>ExpenseSample.UI.Win.Expense</Name>
+      <Project>{567afc46-2ad4-4a2d-83f0-efb7168847f5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Presentation\ExpenseSample.UI.ManagerApplication\ExpenseSample.UI.Win.Approver.csproj">
+      <Name>ExpenseSample.UI.Win.Approver</Name>
+      <Project>{ee34e949-e0f9-4627-b41e-354d0bfa1cc9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Presentation\ExpenseSample.UI.Process\ExpenseSample.UI.Process.csproj">
+      <Name>ExpenseSample.UI.Process</Name>
+      <Project>{cefb5a4e-b58d-416a-a8c6-3aa7fbee8000}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Presentation\ExpenseSample.UI.Web\ExpenseSample.UI.Web.csproj">
+      <Name>ExpenseSample.UI.Web</Name>
+      <Project>{8506655a-08ed-4ae0-8778-dcb25ffc88a7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\ExpenseSample.Services.Contracts\ExpenseSample.Services.Contracts.csproj">
+      <Name>ExpenseSample.Services.Contracts</Name>
+      <Project>{ecbcaa00-448e-4c01-a2fb-0abc6f84782c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\ExpenseSample.Services\ExpenseSample.Services.csproj">
+      <Name>ExpenseSample.Services</Name>
+      <Project>{7cbcf46c-c38f-4cfa-9142-bd11114cbe8f}</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

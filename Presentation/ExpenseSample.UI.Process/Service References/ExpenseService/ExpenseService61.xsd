@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/ExpenseSample.Business.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ExpenseSample.Business.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8000/ExpenseService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfExpense">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Expense" nillable="true" type="tns:Expense" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpense" nillable="true" type="tns:ArrayOfExpense" />
+  <xs:complexType name="Expense">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:double" />
+      <xs:element minOccurs="0" name="AssignedTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Category" type="tns:ExpenseCategory" />
+      <xs:element minOccurs="0" name="CategoryID" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="DateModified" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateSubmitted" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Employee" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpenseDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExpenseID" type="xs:long" />
+      <xs:element minOccurs="0" name="ExpenseLogs" nillable="true" type="tns:ArrayOfExpenseLog" />
+      <xs:element minOccurs="0" name="ExpenseReviews" nillable="true" type="tns:ArrayOfExpenseReview" />
+      <xs:element minOccurs="0" name="IsCompleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" type="tns:ExpenseStatus" />
+      <xs:element minOccurs="0" name="StatusID" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="WorkflowID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Expense" nillable="true" type="tns:Expense" />
+  <xs:simpleType name="ExpenseCategory">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LocalTravel" />
+      <xs:enumeration value="OverseasTravel" />
+      <xs:enumeration value="Entertainment" />
+      <xs:enumeration value="Medical" />
+      <xs:enumeration value="Others" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExpenseCategory" nillable="true" type="tns:ExpenseCategory" />
+  <xs:complexType name="ArrayOfExpenseLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpenseLog" nillable="true" type="tns:ExpenseLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpenseLog" nillable="true" type="tns:ArrayOfExpenseLog" />
+  <xs:complexType name="ExpenseLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateCreated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Expense" nillable="true" type="tns:Expense" />
+      <xs:element minOccurs="0" name="ExpenseID" type="xs:long" />
+      <xs:element minOccurs="0" name="LogID" type="xs:long" />
+      <xs:element minOccurs="0" name="StatusID" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExpenseLog" nillable="true" type="tns:ExpenseLog" />
+  <xs:complexType name="ArrayOfExpenseReview">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpenseReview" nillable="true" type="tns:ExpenseReview" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpenseReview" nillable="true" type="tns:ArrayOfExpenseReview" />
+  <xs:complexType name="ExpenseReview">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateApproved" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Expense" nillable="true" type="tns:Expense" />
+      <xs:element minOccurs="0" name="ExpenseID" type="xs:long" />
+      <xs:element minOccurs="0" name="IsApproved" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReviewID" type="xs:long" />
+      <xs:element minOccurs="0" name="Reviewer" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExpenseReview" nillable="true" type="tns:ExpenseReview" />
+  <xs:simpleType name="ExpenseStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pending" />
+      <xs:enumeration value="Cancelled" />
+      <xs:enumeration value="Reviewed" />
+      <xs:enumeration value="Escalated" />
+      <xs:enumeration value="Approved" />
+      <xs:enumeration value="Rejected" />
+      <xs:enumeration value="Expired" />
+      <xs:enumeration value="Disbursed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExpenseStatus" nillable="true" type="tns:ExpenseStatus" />
+</xs:schema>

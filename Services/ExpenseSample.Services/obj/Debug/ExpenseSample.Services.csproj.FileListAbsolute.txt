@@ -1,0 +1,5 @@
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\bin\ExpenseSample.Services.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\bin\ExpenseSample.Services.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Services\ExpenseSample.Services\obj\Debug\ExpenseSample.Services.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Services\ExpenseSample.Services\obj\Debug\ExpenseSample.Services.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Services\ExpenseSample.Services\obj\Debug\ExpenseSample.Services.pdb

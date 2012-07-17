@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://serena-yeoh//LayerSample/Expense/2007/08" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://serena-yeoh//LayerSample/Expense/2007/08" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://serena-yeoh//LayerSample/Expense/2007/08/Imports">
+      <xsd:import schemaLocation="http://localhost:8000/ExpenseService?xsd=xsd0" namespace="http://serena-yeoh//LayerSample/Expense/2007/08" />
+      <xsd:import schemaLocation="http://localhost:8000/ExpenseService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ExpenseSample.Services.Contracts" />
+      <xsd:import schemaLocation="http://localhost:8000/ExpenseService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8000/ExpenseService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ExpenseSample.Business.Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IExpenseService_Purge_InputMessage">
+    <wsdl:part name="parameters" element="tns:Purge" />
+  </wsdl:message>
+  <wsdl:message name="IExpenseService_Purge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PurgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpenseService_Purge_ProcessExecutionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/ExpenseSample.Services.Contracts" name="detail" element="q1:ProcessExecutionFault" />
+  </wsdl:message>
+  <wsdl:message name="IExpenseService_ListActiveExpenses_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListActiveExpenses" />
+  </wsdl:message>
+  <wsdl:message name="IExpenseService_ListActiveExpenses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListActiveExpensesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpenseService_ListActiveExpenses_ProcessExecutionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/ExpenseSample.Services.Contracts" name="detail" element="q2:ProcessExecutionFault" />
+  </wsdl:message>
+  <wsdl:message name="IExpenseService_ListExpensesForEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListExpensesForEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IExpenseService_ListExpensesForEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListExpensesForEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpenseService_ListExpensesForEmployee_ProcessExecutionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/ExpenseSample.Services.Contracts" name="detail" element="q3:ProcessExecutionFault" />
+  </wsdl:message>
+  <wsdl:message name="IExpenseService_ListExpensesForApproval_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListExpensesForApproval" />
+  </wsdl:message>
+  <wsdl:message name="IExpenseService_ListExpensesForApproval_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListExpensesForApprovalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpenseService_ListExpensesForApproval_ProcessExecutionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/ExpenseSample.Services.Contracts" name="detail" element="q4:ProcessExecutionFault" />
+  </wsdl:message>
+  <wsdl:message name="IExpenseService_ListExpenseReviews_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListExpenseReviews" />
+  </wsdl:message>
+  <wsdl:message name="IExpenseService_ListExpenseReviews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListExpenseReviewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpenseService_ListExpenseReviews_ProcessExecutionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/ExpenseSample.Services.Contracts" name="detail" element="q5:ProcessExecutionFault" />
+  </wsdl:message>
+  <wsdl:message name="IExpenseService_ListExpenseLogs_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListExpenseLogs" />
+  </wsdl:message>
+  <wsdl:message name="IExpenseService_ListExpenseLogs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListExpenseLogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExpenseService_ListExpenseLogs_ProcessExecutionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/ExpenseSample.Services.Contracts" name="detail" element="q6:ProcessExecutionFault" />
+  </wsdl:message>
+  <wsdl:portType name="IExpenseService">
+    <wsdl:operation name="Purge">
+      <wsdl:input wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/Purge" message="tns:IExpenseService_Purge_InputMessage" />
+      <wsdl:output wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/PurgeResponse" message="tns:IExpenseService_Purge_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/PurgeProcessExecutionFaultFault" name="ProcessExecutionFaultFault" message="tns:IExpenseService_Purge_ProcessExecutionFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListActiveExpenses">
+      <wsdl:input wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/ListActiveExpenses" message="tns:IExpenseService_ListActiveExpenses_InputMessage" />
+      <wsdl:output wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/ListActiveExpensesResponse" message="tns:IExpenseService_ListActiveExpenses_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/ListActiveExpensesProcessExecutionFaultFault" name="ProcessExecutionFaultFault" message="tns:IExpenseService_ListActiveExpenses_ProcessExecutionFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListExpensesForEmployee">
+      <wsdl:input wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/ListExpensesForEmployee" message="tns:IExpenseService_ListExpensesForEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/ListExpensesForEmployeeResponse" message="tns:IExpenseService_ListExpensesForEmployee_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/ListExpensesForEmployeeProcessExecutionFaultFault" name="ProcessExecutionFaultFault" message="tns:IExpenseService_ListExpensesForEmployee_ProcessExecutionFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListExpensesForApproval">
+      <wsdl:input wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/ListExpensesForApproval" message="tns:IExpenseService_ListExpensesForApproval_InputMessage" />
+      <wsdl:output wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/ListExpensesForApprovalResponse" message="tns:IExpenseService_ListExpensesForApproval_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/ListExpensesForApprovalProcessExecutionFaultFault" name="ProcessExecutionFaultFault" message="tns:IExpenseService_ListExpensesForApproval_ProcessExecutionFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListExpenseReviews">
+      <wsdl:input wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/ListExpenseReviews" message="tns:IExpenseService_ListExpenseReviews_InputMessage" />
+      <wsdl:output wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/ListExpenseReviewsResponse" message="tns:IExpenseService_ListExpenseReviews_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/ListExpenseReviewsProcessExecutionFaultFault" name="ProcessExecutionFaultFault" message="tns:IExpenseService_ListExpenseReviews_ProcessExecutionFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListExpenseLogs">
+      <wsdl:input wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/ListExpenseLogs" message="tns:IExpenseService_ListExpenseLogs_InputMessage" />
+      <wsdl:output wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/ListExpenseLogsResponse" message="tns:IExpenseService_ListExpenseLogs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://serena-yeoh//LayerSample/Expense/2007/08/IExpenseService/ListExpenseLogsProcessExecutionFaultFault" name="ProcessExecutionFaultFault" message="tns:IExpenseService_ListExpenseLogs_ProcessExecutionFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

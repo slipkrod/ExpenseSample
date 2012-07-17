@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExpenseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ExpenseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ExpenseLogs" EntityType="ExpenseModel.ExpenseLog" />
+    <EntitySet Name="ExpenseReviews" EntityType="ExpenseModel.ExpenseReview" />
+    <EntitySet Name="Expenses" EntityType="ExpenseModel.Expense" />
+    <AssociationSet Name="FK_ExpenseLogs_Expenses1" Association="ExpenseModel.FK_ExpenseLogs_Expenses1">
+      <End Role="Expenses" EntitySet="Expenses" />
+      <End Role="ExpenseLogs" EntitySet="ExpenseLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExpenseReviews_Expenses1" Association="ExpenseModel.FK_ExpenseReviews_Expenses1">
+      <End Role="Expenses" EntitySet="Expenses" />
+      <End Role="ExpenseReviews" EntitySet="ExpenseReviews" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ExpenseLog">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ExpenseID" Type="Int64" />
+    <Property Name="StatusID" Type="Byte" a:SetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <NavigationProperty Name="Expense" Relationship="ExpenseModel.FK_ExpenseLogs_Expenses1" FromRole="ExpenseLogs" ToRole="Expenses" />
+  </EntityType>
+  <EntityType Name="ExpenseReview">
+    <Key>
+      <PropertyRef Name="ReviewID" />
+    </Key>
+    <Property Name="ReviewID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ExpenseID" Type="Int64" />
+    <Property Name="Reviewer" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Remarks" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="IsApproved" Type="Boolean" />
+    <Property Name="DateApproved" Type="DateTime" />
+    <NavigationProperty Name="Expense" Relationship="ExpenseModel.FK_ExpenseReviews_Expenses1" FromRole="ExpenseReviews" ToRole="Expenses" />
+  </EntityType>
+  <EntityType Name="Expense">
+    <Key>
+      <PropertyRef Name="ExpenseID" />
+    </Key>
+    <Property Name="ExpenseID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkflowID" Type="Guid" />
+    <Property Name="Employee" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ExpenseDate" Type="DateTime" />
+    <Property Name="Amount" Type="Double" />
+    <Property Name="CategoryID" Type="Byte" a:SetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+    <Property Name="Description" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="StatusID" Type="Byte" a:SetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+    <Property Name="AssignedTo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IsCompleted" Type="Boolean" />
+    <Property Name="DateSubmitted" Type="DateTime" />
+    <Property Name="DateModified" Type="DateTime" />
+    <NavigationProperty Name="ExpenseLogs" Relationship="ExpenseModel.FK_ExpenseLogs_Expenses1" FromRole="Expenses" ToRole="ExpenseLogs" />
+    <NavigationProperty Name="ExpenseReviews" Relationship="ExpenseModel.FK_ExpenseReviews_Expenses1" FromRole="Expenses" ToRole="ExpenseReviews" />
+  </EntityType>
+  <Association Name="FK_ExpenseLogs_Expenses1">
+    <End Role="Expenses" Type="ExpenseModel.Expense" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ExpenseLogs" Type="ExpenseModel.ExpenseLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Expenses">
+        <PropertyRef Name="ExpenseID" />
+      </Principal>
+      <Dependent Role="ExpenseLogs">
+        <PropertyRef Name="ExpenseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExpenseReviews_Expenses1">
+    <End Role="Expenses" Type="ExpenseModel.Expense" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ExpenseReviews" Type="ExpenseModel.ExpenseReview" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Expenses">
+        <PropertyRef Name="ExpenseID" />
+      </Principal>
+      <Dependent Role="ExpenseReviews">
+        <PropertyRef Name="ExpenseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

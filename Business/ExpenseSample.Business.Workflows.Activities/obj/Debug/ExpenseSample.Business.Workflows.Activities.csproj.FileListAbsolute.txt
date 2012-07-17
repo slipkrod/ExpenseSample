@@ -1,0 +1,5 @@
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\bin\ExpenseSample.Business.Workflows.Activities.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\bin\ExpenseSample.Business.Workflows.Activities.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows.Activities\obj\Debug\ExpenseSample.Business.Workflows.Activities.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows.Activities\obj\Debug\ExpenseSample.Business.Workflows.Activities.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Business\ExpenseSample.Business.Workflows.Activities\obj\Debug\ExpenseSample.Business.Workflows.Activities.pdb

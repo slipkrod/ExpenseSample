@@ -1,0 +1,9 @@
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\bin\ApproverApplication.exe.config
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\bin\ApproverApplication.exe
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\bin\ApproverApplication.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ManagerApplication\obj\Debug\ExpenseSample.UI.Win.Approver.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ManagerApplication\obj\Debug\ExpenseSample.UI.ApproverForm.resources
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ManagerApplication\obj\Debug\ExpenseSample.UI.Win.Properties.Resources.resources
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ManagerApplication\obj\Debug\ExpenseSample.UI.Win.Approver.csproj.GenerateResource.Cache
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ManagerApplication\obj\Debug\ApproverApplication.exe
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Presentation\ExpenseSample.UI.ManagerApplication\obj\Debug\ApproverApplication.pdb

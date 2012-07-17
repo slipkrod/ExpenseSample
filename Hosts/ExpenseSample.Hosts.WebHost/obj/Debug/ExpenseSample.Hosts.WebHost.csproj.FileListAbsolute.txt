@@ -1,0 +1,5 @@
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\bin\ExpenseSample.Hosts.WebHost.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\bin\ExpenseSample.Hosts.WebHost.pdb
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Hosts\ExpenseSample.Hosts.WebHost\obj\Debug\ExpenseSample.Hosts.WebHost.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Hosts\ExpenseSample.Hosts.WebHost\obj\Debug\ExpenseSample.Hosts.WebHost.dll
+C:\Users\Rodrigo\Documents\Sistemas\Net\Code\ExpenseSample V4.0.2\Hosts\ExpenseSample.Hosts.WebHost\obj\Debug\ExpenseSample.Hosts.WebHost.pdb

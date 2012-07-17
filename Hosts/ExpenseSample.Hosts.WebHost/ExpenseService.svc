@@ -1,0 +1,1 @@
+<%@ ServiceHost Language=C# Service="ExpenseSample.Services.ExpenseService" Factory="System.ServiceModel.Activation.ServiceHostFactory" %>
