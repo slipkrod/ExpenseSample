@@ -91,5 +91,9 @@ namespace ExpenseSample.Business.Entities
             return string.Format("Expense:\n\tWorkflowID={0}\n\tExpenseID={1}\n\tEmployee={2}\n\tDescription={3}\n\tAmount={4}\n\tCategory={5}\n\tExpenseDate={6}\n\tDateSubmitted={7}\n\tStatus={8}\n\tAssignedTo={9}\n\tIsCompleted={10}\n\tDateModified={11}\n",
                 this.WorkflowID, this.ExpenseID, this.Employee, this.Description, this.Amount, this.Category, this.ExpenseDate, this.DateSubmitted, this.Status, this.AssignedTo, this.IsCompleted, this.DateModified);
         }
+		
+		private string Mensaje(){
+			return "";
+		}
     }
 }
