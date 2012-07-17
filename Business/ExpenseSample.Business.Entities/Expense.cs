@@ -92,8 +92,5 @@ namespace ExpenseSample.Business.Entities
                 this.WorkflowID, this.ExpenseID, this.Employee, this.Description, this.Amount, this.Category, this.ExpenseDate, this.DateSubmitted, this.Status, this.AssignedTo, this.IsCompleted, this.DateModified);
         }
 		
-		private string Mensaje(){
-			return "";
-		}
     }
 }
